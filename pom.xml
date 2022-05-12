@@ -76,6 +76,12 @@
             <artifactId>spring-jdbc</artifactId>
             <version>5.3.17</version>
         </dependency>
+        <!--AOP依赖-->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.9</version>
+        </dependency>
     </dependencies>
 
     <!--在 build 中配置 resources，来防止资源导出失败问题-->

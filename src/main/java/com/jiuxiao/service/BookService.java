@@ -51,4 +51,20 @@ public interface BookService {
      * @return
      */
     List<Books> selectAllBook();
+
+    /**
+     * 根据书名查找书籍
+     *
+     * @param bookName
+     * @return
+     */
+    List<Books> queryBookByName(String bookName);
+
+    /**
+     * 根据书名判断数据库中是否有该书籍
+     *
+     * @param bookName
+     * @return
+     */
+    boolean isExistBookByName(String bookName);
 }

@@ -39,4 +39,12 @@ public class BookServiceImpl implements BookService {
     public List<Books> selectAllBook() {
         return bookMapper.selectAllBook();
     }
+
+    public List<Books> queryBookByName(String bookName) {
+        return bookMapper.queryBookByName(bookName);
+    }
+
+    public boolean isExistBookByName(String bookName) {
+        return bookMapper.isExistBookByName(bookName);
+    }
 }

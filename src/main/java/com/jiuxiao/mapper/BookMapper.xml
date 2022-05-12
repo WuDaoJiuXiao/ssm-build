@@ -4,8 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jiuxiao.mapper.BookMapper">
     <insert id="addBook" parameterType="Books">
-        insert into ssm.books (bookId, bookName, bookCount, detail)
-            value (#{bookId}, #{bookName}, #{bookCount}, #{detail})
+        insert into ssm.books (bookName, bookCount, detail)
+            value (#{bookName}, #{bookCount}, #{detail})
     </insert>
 
     <delete id="deleteBookById" parameterType="_int">
@@ -31,5 +31,18 @@
     <select id="selectAllBook" resultType="Books">
         select *
         from ssm.books
+    </select>
+
+    <select id="queryBookByName" resultType="Books">
+        select *
+        from ssm.books
+        where bookName = #{bookName}
+    </select>
+
+    <select id="isExistBookByName" resultType="boolean">
+        select count(*)
+        from ssm.books
+        where bookName = #{bookName}
+        limit 1
     </select>
 </mapper>

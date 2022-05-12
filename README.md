@@ -496,6 +496,7 @@ public class BookServiceImpl implements BookService {
 
     <import resource="classpath:spring-mapper.xml"/>
     <import resource="classpath:spring-service.xml"/>
+    <import resource="classpath:springMvc.xml"/>
 </beans>
 ```
 
